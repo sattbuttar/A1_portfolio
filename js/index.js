@@ -95,34 +95,11 @@ class Article extends Page {
 
 class Footer extends Page {
     render() {
-        let sMenu = "";
-        for (let n = 0; n < aPages.length; n++) {
-            const sMenuItem = aPages[n].title;
-            if (sMenuItem != "index") {
-                sMenu += `<li><a href="#${sMenuItem}">${sMenuItem}</a></li>`;
-            }
-        }
-
-        $("footer").html(`
-        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Portfolio of ${this.sName}</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    ${sMenu}
-                </ul>
-            </div>
-
-        </div>
-
-        `);
+        const sName = "Satwinder Singh";
+        const yToday = new Date().getFullYear();
+        $("footer").html(
+            `&copy; ${yToday} ${sName}`
+        );
     }
 }
 
