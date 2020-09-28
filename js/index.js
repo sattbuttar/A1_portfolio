@@ -97,8 +97,8 @@ class Footer extends Page {
     render() {
         const sName = "Satwinder Singh";
         const yToday = new Date().getFullYear();
-        $("footer").html(
-            `&copy; ${yToday} ${sName}`
+        $("footer").html( 
+            `<div style = "text-align:center"><b>&copy; ${yToday} ${sName}</b></div>`
         );
     }
 }
