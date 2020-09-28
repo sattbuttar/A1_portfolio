@@ -8,5 +8,5 @@ article#items{
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
-    margin-top: 10;
+    margin-top: 10%;
 }
