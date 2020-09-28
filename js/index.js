@@ -136,6 +136,16 @@ class Nav extends Page {
     }
 }
 
+class Footer extends Page {
+    render() {
+        const sName = "Satwinder Singh";
+        const yToday = new Date().getFullYear();
+        $("footer").html(
+            `&copy; ${yToday} ${sName}`
+        );
+    }
+}
+
 class Portfolio extends Page {
     constructor() {
         super();
